@@ -5,8 +5,8 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 const app = express();
 const PORT = process.env.PORT || 5000;
-import acc from './model.js';
-import { register,login } from './db.js';
+
+import { register,login,journal } from './db.js';
 
 app.use(cors());
 app.use(express.json());
@@ -27,6 +27,7 @@ app.listen(PORT, () => {
 
 app.post('/signup',register);
 app.post('/login',login);
+app.post('/journal',journal);
 app.get('/',()=>{
     console.log("hello");
 })
