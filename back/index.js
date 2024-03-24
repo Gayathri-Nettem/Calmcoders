@@ -10,8 +10,8 @@ import { register,login,journal } from './db.js';
 
 app.use(cors());
 app.use(express.json());
-//const xurl=`mongodb+srv://newuser:disha123@cluster0.hmsitr6.mongodb.net/`;
-const xurl=`mongodb+srv://newuser:disha123@cluster0.hmsitr6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+//const xurl=`mongodb+srv://<username>:<password>@cluster0.hmsitr6.mongodb.net/`;
+const xurl=`mongodb+srv://<username>:<password>@cluster0.hmsitr6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 try{
     mongoose.connect(xurl, { useNewUrlParser: true, useUnifiedTopology: true, connectTimeoutMS: 30000 });
     console.log("database connected!")
